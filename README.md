@@ -26,4 +26,7 @@
 > - https://developer.samsung.com/sdp/blog/en-us/2022/05/25/check-which-sensor-you-can-use-in-galaxy-watch-running-wear-os-powered-by-samsung
 > - https://developer.android.com/reference/android/hardware/Sensor
 
+> ## Result
+> ![image](https://github.com/oosedus/HR_data_collection/assets/117005656/76474947-26b4-4a80-9743-39e12bcd6868)
+> ![image](https://github.com/oosedus/HR_data_collection/assets/117005656/4c1bb738-e28d-4213-93ae-597a545d2cf2)
 
