@@ -212,9 +212,9 @@ public class MainActivity extends Activity implements SensorEventListener {
         isRecording = true;
 
         mSensorManager.registerListener(this, mHeartRateSensor, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mPressureSensor, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mProximitySensor, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mHeartBeatSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        // mSensorManager.registerListener(this, mPressureSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        // mSensorManager.registerListener(this, mProximitySensor, SensorManager.SENSOR_DELAY_NORMAL);
+        // mSensorManager.registerListener(this, mHeartBeatSensor, SensorManager.SENSOR_DELAY_NORMAL);
 
         Toast.makeText(this, "Data collection started.", Toast.LENGTH_SHORT).show();
     }
@@ -253,7 +253,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 
         File csvFile = new File(dataDir, fileName);
 
-        String header = "Timestamp,Heart Rate,Pressure,Proximity,Heart Beat\n";
+        String header = "Timestamp,Heart Rate\n";
         try {
             FileOutputStream headerOutputStream = new FileOutputStream(csvFile);
             headerOutputStream.write(header.getBytes());
@@ -281,10 +281,7 @@ public class MainActivity extends Activity implements SensorEventListener {
         if (isRecording) {
             String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS", Locale.getDefault()).format(new Date());
             String data = timeStamp + ","
-                    + (sensor.getType() == Sensor.TYPE_HEART_RATE ? values[0] : "") + ","
-                    + (sensor.getType() == Sensor.TYPE_PRESSURE ? values[0] : "") + ","
-                    + (sensor.getType() == Sensor.TYPE_PROXIMITY ? values[0] : "") + ","
-                    + (sensor.getType() == Sensor.TYPE_HEART_BEAT ? values[0] : "") + "\n";
+                    + (sensor.getType() == Sensor.TYPE_HEART_RATE ? values[0] : "") + "\n";
 
             try {
                 csvOutputStream.write(data.getBytes());
