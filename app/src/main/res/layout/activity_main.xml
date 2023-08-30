@@ -1,52 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:keepScreenOn="true">
 
-    <Button
-        android:id="@+id/start_button"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="Start"
-        android:textSize="8sp" />
-
-    <Button
-        android:id="@+id/stop_button"
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:text="Stop"
-        android:textSize="8sp" />
-
-    <TextView
-        android:id="@+id/text_HEART_RATE"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/heart_rate"
-        android:textSize="8sp" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/text_Pressure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Pressure"
-        android:textSize="8sp" />
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="174dp"
+            android:layout_height="38dp"
+            android:text="Start"
+            android:textSize="8sp" />
 
-    <TextView
-        android:id="@+id/text_Proximity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Proximity"
-        android:textSize="8sp" />
+        <Button
+            android:id="@+id/stop_button"
+            android:layout_width="174dp"
+            android:layout_height="35dp"
+            android:text="Stop"
+            android:textSize="8sp" />
 
-    <TextView
-        android:id="@+id/text_HEART_BEAT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/HEART_BEAT"
-        android:textSize="8sp" />
+        <TextView
+            android:id="@+id/text_HEART_RATE"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:text="@string/heart_rate"
+            android:textSize="8sp" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/text_Pressure"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Pressure"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/text_Proximity"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Proximity"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/text_HEART_BEAT"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:text="@string/HEART_BEAT"
+            android:textSize="8sp" />
+
+    </LinearLayout>
+
+</ScrollView>
